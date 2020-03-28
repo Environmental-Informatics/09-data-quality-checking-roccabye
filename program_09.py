@@ -125,7 +125,7 @@ def Check04_TmaxTminRange( DataDF, ReplacedValuesDF ):
     # replacing the values where Tmax-Tmin>25 with 'nan'
     DataDF.loc[(DataDF['Max Temp']-DataDF['Min Temp']>25),['Max Temp','Min Temp']]= np.nan
     # count of data that has been replaced as nan.
-    ReplacedValuesDF.loc["4. Range"]=[0,Count_TD,Count_TD,0]
+    ReplacedValuesDF.loc["4. Range Fail"]=[0,Count_TD,Count_TD,0]
     
 
     return( DataDF, ReplacedValuesDF )
